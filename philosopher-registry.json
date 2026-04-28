@@ -1,0 +1,33 @@
+{
+  "philosophers": {
+    "hegel": {
+      "source": "remote",
+      "url": "https://raw.githubusercontent.com/Liber1917/hegel-perspective-skill/main/skills/hegel-perspective/SKILL.md",
+      "repo": "https://github.com/Liber1917/hegel-perspective-skill",
+      "description": "黑格尔辩证法视角",
+      "keywords": ["辩证法", "正反合", "精神", "逻辑"],
+      "enabled": true
+    },
+    "marx": {
+      "source": "remote",
+      "url": "https://raw.githubusercontent.com/Liber1917/karl-marx-skill/main/skills/karl-marx/SKILL.md",
+      "repo": "https://github.com/Liber1917/karl-marx-skill",
+      "description": "马克思历史唯物主义批判视角",
+      "keywords": ["阶级", "物质", "历史唯物", "批判"],
+      "enabled": true
+    },
+    "plato": {
+      "source": "remote",
+      "url": "https://raw.githubusercontent.com/USER/plato-perspective/main/SKILL.md",
+      "repo": "https://github.com/USER/plato-perspective",
+      "description": "柏拉图理念论视角",
+      "keywords": ["理念", "形式", "灵魂", "回忆"],
+      "enabled": false
+    }
+  },
+  "_meta": {
+    "version": "1.0",
+    "updated": "2026-04-29",
+    "note": "添加新哲人：在此文件中添加条目，enabled设为true即可"
+  }
+}

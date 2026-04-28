@@ -1,6 +1,0 @@
-[submodule "skills/hegel-perspective"]
-	path = skills/hegel-perspective
-	url = https://github.com/Liber1917/hegel-perspective-skill.git
-[submodule "skills/karl-marx"]
-	path = skills/karl-marx
-	url = https://github.com/Liber1917/karl-marx-skill.git

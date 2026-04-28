@@ -116,6 +116,8 @@
 
 每个哲人是一个独立的Skill，通过编排层注入搜索能力。
 
+**热插拔机制**：哲人通过 `philosopher-registry.json` 声明式注册，运行时从远端仓库动态加载。
+
 **标准接口**：
 ```
 输入：
@@ -131,13 +133,15 @@
 - 主动识别需要搜索的内容
 ```
 
-**已集成的哲人**：
-- [x] hegel-perspective（黑格尔）
-- [x] karl-marx（马克思）
-- [ ] plato-perspective（柏拉图，待蒸馏）
-- [ ] aristotle-perspective（亚里士多德，待蒸馏）
-- [ ] nietzsche-perspective（尼采，待蒸馏）
-- [ ] socrates-perspective（苏格拉底，待蒸馏）
+**已注册的哲人**（通过远端热插拔）：
+- [x] hegel（黑格尔）— 远端加载
+- [x] marx（马克思）— 远端加载
+- [ ] plato（柏拉图，待添加）
+- [ ] aristotle（亚里士多德，待添加）
+- [ ] nietzsche（尼采，待添加）
+- [ ] socrates（苏格拉底，待添加）
+
+**添加新哲人**：只需在 `philosopher-registry.json` 中添加条目即可，无需修改代码或重新部署。
 
 ### 3.4 证据持久化层
 
@@ -362,25 +366,64 @@ dialectike-records/
 | 组件 | 技术选择 |
 |------|---------|
 | 核心框架 | WorkBuddy Agent Framework |
-| 哲人Skill | 女娲(Nuwa)方法论蒸馏的Skill |
+| 哲人Skill | 女娲(Nuwa)方法论蒸馏的Skill（远端热插拔） |
 | 搜索能力 | Web Search（编排层注入） |
 | 持久化 | Markdown + JSON（文件系统） |
 | 版本控制 | Git + GitHub |
 
-### 7.2 Skill体系
+### 7.2 热插拔架构
+
+```
+哲人注册中心（philosopher-registry.json）
+    │
+    ├── hegel: { source: "remote", url: "https://raw.githubusercontent.com/..." }
+    ├── marx:  { source: "remote", url: "https://raw.githubusercontent.com/..." }
+    └── ...
+
+编排层（dialectike SKILL.md）
+    │
+    ├── 读取 registry.json
+    ├── 过滤 enabled: true
+    └── web_fetch(url) → 动态加载 SKILL.md
+```
+
+### 7.3 Skill体系
 
 ```
 skills/
 ├── dialectike/              # 辩证法编排核心Skill
-│   ├── SKILL.md            # 主编排逻辑
-│   ├── orchestrator.py     # 编排器
-│   ├── scribe.py           # 书记模块
+│   ├── SKILL.md            # 主编排逻辑（支持热插拔）
 │   └── prompts/            # 提示词模板
-├── hegel-perspective/      # 已完成
-├── karl-marx/              # 已完成
-├── plato-perspective/      # 待蒸馏
-├── aristotle-perspective/  # 待蒸馏
-└── nietzsche-perspective/  # 待蒸馏
+│
+philosophia-debate（主仓库）
+│
+└── philosopher-registry.json  # 哲人注册中心（声明式配置）
+    │
+    └── 各哲人Skill通过远端仓库热插拔
+        ├── hegel-perspective-skill（独立GitHub仓库）
+        ├── karl-marx-skill（独立GitHub仓库）
+        └── ...（未来更多哲人）
+```
+
+### 7.4 远端热插拔流程
+
+```
+1. 启动 dialectike
+   ↓
+2. 读取 philosopher-registry.json
+   ↓
+3. 遍历所有 enabled: true 的哲人
+   ↓
+4. 对 source: "remote" 的哲人：
+   - web_fetch(url) 获取 SKILL.md 内容
+   - 注入到上下文中
+   ↓
+5. 辩论开始
+
+添加新哲人：
+1. 创建独立的 GitHub 仓库（如 xxx-perspective-skill）
+2. 在 philosopher-registry.json 中添加条目
+3. 无需任何脚本，立即生效
 ```
 
 ### 7.3 关键接口
@@ -428,18 +471,21 @@ skills/
 
 ## 八、里程碑
 
-### Phase 1: 核心框架 ⬜
-- [ ] 设计并实现 dialectike-skill
-- [ ] 实现编排器逻辑
-- [ ] 实现书记Agent
-- [ ] 设计证据池数据结构
-- [ ] 实现持久化机制
+### Phase 1: 核心框架 ✅
+- [x] 设计并实现 dialectike-skill
+- [x] 实现编排器逻辑
+- [x] 实现书记Agent
+- [x] 设计证据池数据结构
+- [x] 实现持久化机制
+- [x] 实现远端热插拔机制（philosopher-registry.json）
 
 ### Phase 2: 哲人蒸馏 ⬜
-- [ ] 完成 plato-perspective
-- [ ] 完成 aristotle-perspective
-- [ ] 完成 socrates-perspective
-- [ ] 完成 nietzsche-perspective
+- [x] hegel-perspective（已发布为独立仓库）
+- [x] karl-marx（已发布为独立仓库）
+- [ ] plato-perspective（待蒸馏）
+- [ ] aristotle-perspective（待蒸馏）
+- [ ] socrates-perspective（待蒸馏）
+- [ ] nietzsche-perspective（待蒸馏）
 - [ ] 可选：kant-perspective, heidegger-perspective
 
 ### Phase 3: 高级功能 ⬜
@@ -449,7 +495,7 @@ skills/
 - [ ] 支持辩论导出为多种格式
 
 ### Phase 4: 生态建设 ⬜
-- [ ] 开放哲人Skill共享机制
+- [x] 开放哲人Skill共享机制（通过远端热插拔）
 - [ ] 建立辩论质量评估标准
 - [ ] 开展实际辩论案例
 
@@ -493,6 +539,7 @@ skills/
 | 2026-04-29 | 书记Agent而非裁判 | 辩论目的是逼近真理，不是分胜负 |
 | 2026-04-29 | 引入Epoché机制 | 承认认知边界，保持认识开放性 |
 | 2026-04-29 | 证据持久化 | 积累辩论知识，支持复盘和学习 |
+| 2026-04-29 | 远端热插拔（非submodule） | 哲人Skill作为独立仓库，通过registry动态加载，无需本地clone |
 
 ---
 
