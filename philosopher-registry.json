@@ -2,7 +2,7 @@
   "philosophers": {
     "hegel": {
       "source": "remote",
-      "url": "https://raw.githubusercontent.com/Liber1917/hegel-perspective-skill/main/skills/hegel-perspective/SKILL.md",
+      "url": "https://raw.githubusercontent.com/Liber1917/hegel-perspective-skill/main/SKILL.md",
       "repo": "https://github.com/Liber1917/hegel-perspective-skill",
       "description": "黑格尔辩证法视角",
       "keywords": ["辩证法", "正反合", "精神", "逻辑"],
@@ -10,7 +10,7 @@
     },
     "marx": {
       "source": "remote",
-      "url": "https://raw.githubusercontent.com/Liber1917/karl-marx-skill/main/skills/karl-marx/SKILL.md",
+      "url": "https://raw.githubusercontent.com/Liber1917/karl-marx-skill/main/SKILL.md",
       "repo": "https://github.com/Liber1917/karl-marx-skill",
       "description": "马克思历史唯物主义批判视角",
       "keywords": ["阶级", "物质", "历史唯物", "批判"],
