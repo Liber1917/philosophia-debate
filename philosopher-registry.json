@@ -5,37 +5,43 @@
       "url": "https://raw.githubusercontent.com/Liber1917/hegel-perspective-skill/main/SKILL.md",
       "repo": "https://github.com/Liber1917/hegel-perspective-skill",
       "description": "黑格尔辩证法视角",
-      "keywords": ["辩证法", "正反合", "精神", "逻辑"],
-      "enabled": true
+      "keywords": ["辩证法", "正反合", "精神", "逻辑", "扬弃"],
+      "enabled": true,
+      "emoji": "🔵"
     },
     "marx": {
       "source": "remote",
       "url": "https://raw.githubusercontent.com/Liber1917/karl-marx-skill/main/SKILL.md",
       "repo": "https://github.com/Liber1917/karl-marx-skill",
       "description": "马克思历史唯物主义批判视角",
-      "keywords": ["阶级", "物质", "历史唯物", "批判"],
-      "enabled": true
-    },
-    "plato": {
-      "source": "remote",
-      "url": "https://raw.githubusercontent.com/USER/plato-perspective/main/SKILL.md",
-      "repo": "https://github.com/USER/plato-perspective",
-      "description": "柏拉图理念论视角",
-      "keywords": ["理念", "形式", "灵魂", "回忆"],
-      "enabled": false
+      "keywords": ["阶级", "物质", "历史唯物", "批判", "意识形态", "剩余价值"],
+      "enabled": true,
+      "emoji": "🔴"
     },
     "lacan": {
       "source": "remote",
       "url": "https://raw.githubusercontent.com/Liber1917/lacan-perspective-skill/main/SKILL.md",
       "repo": "https://github.com/Liber1917/lacan-perspective-skill",
       "description": "拉康精神分析视角",
-      "keywords": ["无意识", "欲望", "镜像", "RSI", "转移", "大他者", "对象a"],
-      "enabled": true
+      "keywords": ["无意识", "欲望", "镜像", "RSI", "转移", "大他者", "对象a", "穿越幻想"],
+      "enabled": true,
+      "emoji": "🟣"
+    },
+    "plato": {
+      "source": "remote",
+      "url": "https://raw.githubusercontent.com/USER/plato-perspective/main/SKILL.md",
+      "repo": "https://github.com/USER/plato-perspective",
+      "description": "柏拉图理念论视角",
+      "keywords": ["理念", "形式", "灵魂", "回忆", "洞穴"],
+      "enabled": false,
+      "emoji": "🔘"
     }
   },
   "_meta": {
-    "version": "1.1",
+    "version": "1.3",
     "updated": "2026-04-29",
-    "note": "添加新哲人：在此文件中添加条目，enabled设为true即可"
+    "note": "v1.3: 所有哲人统一用remote URL，任何人的skill均可接入。添加emoji字段。",
+    "接入新哲人": "在philosophers中添加条目，source=remote，url指向任意GitHub账户的raw SKILL.md，enabled=true即可",
+    "失败容错": "加载失败的哲人会在陈列卡片中标记为⚠️，不影响其他哲人"
   }
 }
