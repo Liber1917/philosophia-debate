@@ -23,10 +23,18 @@
       "description": "柏拉图理念论视角",
       "keywords": ["理念", "形式", "灵魂", "回忆"],
       "enabled": false
+    },
+    "lacan": {
+      "source": "remote",
+      "url": "https://raw.githubusercontent.com/Liber1917/lacan-perspective-skill/main/SKILL.md",
+      "repo": "https://github.com/Liber1917/lacan-perspective-skill",
+      "description": "拉康精神分析视角",
+      "keywords": ["无意识", "欲望", "镜像", "RSI", "转移", "大他者", "对象a"],
+      "enabled": true
     }
   },
   "_meta": {
-    "version": "1.0",
+    "version": "1.1",
     "updated": "2026-04-29",
     "note": "添加新哲人：在此文件中添加条目，enabled设为true即可"
   }
