@@ -35,12 +35,21 @@
       "keywords": ["理念", "形式", "灵魂", "回忆", "洞穴"],
       "enabled": false,
       "emoji": "🔘"
+    },
+    "zizek": {
+      "source": "remote",
+      "url": "https://raw.githubusercontent.com/Liber1917/zizek-perspective-skill/main/SKILL.md",
+      "repo": "https://github.com/Liber1917/zizek-perspective-skill",
+      "description": "齐泽克精神分析与意识形态批判视角",
+      "keywords": ["意识形态", "崇高客体", "穿越幻象", "大他者", "拉康", "黑格尔", "马克思主义", "视差"],
+      "enabled": true,
+      "emoji": "🟡"
     }
   },
   "_meta": {
-    "version": "1.3",
+    "version": "1.4",
     "updated": "2026-04-29",
-    "note": "v1.3: 所有哲人统一用remote URL，任何人的skill均可接入。添加emoji字段。",
+    "note": "v1.4: 添加齐泽克zizek条目（remote源，Libre1917/zizek-perspective-skill）。",
     "接入新哲人": "在philosophers中添加条目，source=remote，url指向任意GitHub账户的raw SKILL.md，enabled=true即可",
     "失败容错": "加载失败的哲人会在陈列卡片中标记为⚠️，不影响其他哲人"
   }
