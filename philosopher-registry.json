@@ -27,6 +27,15 @@
       "enabled": true,
       "emoji": "🟣"
     },
+    "wittgenstein": {
+      "source": "remote",
+      "url": "https://raw.githubusercontent.com/Liber1917/witgenstein-perspective-skill/main/SKILL.md",
+      "repo": "https://github.com/Liber1917/witgenstein-perspective-skill",
+      "description": "维特根斯坦哲学视角 - 语言游戏、家族相似性、规则悖论",
+      "keywords": ["语言游戏", "家族相似性", "规则遵循", "沉默", "私人语言", "不可言说"],
+      "enabled": true,
+      "emoji": "🟢"
+    },
     "plato": {
       "source": "remote",
       "url": "https://raw.githubusercontent.com/USER/plato-perspective/main/SKILL.md",
@@ -44,12 +53,21 @@
       "keywords": ["意识形态", "崇高客体", "穿越幻象", "大他者", "拉康", "黑格尔", "马克思主义", "视差"],
       "enabled": true,
       "emoji": "🟡"
+    },
+    "lenin": {
+      "source": "remote",
+      "url": "https://raw.githubusercontent.com/Liber1917/lenin-perspective-skill/main/SKILL.md",
+      "repo": "https://github.com/Liber1917/lenin-perspective-skill",
+      "description": "列宁革命理论与组织策略视角",
+      "keywords": ["先锋队", "帝国主义", "国家机器", "具体真理", "民主集中制", "薄弱环节", "无产阶级专政"],
+      "enabled": true,
+      "emoji": "🔶"
     }
   },
   "_meta": {
-    "version": "1.4",
+    "version": "1.5",
     "updated": "2026-04-29",
-    "note": "v1.4: 添加齐泽克zizek条目（remote源，Libre1917/zizek-perspective-skill）。",
+    "note": "v1.5: 添加列宁lenin条目（remote源，Liber1917/lenin-perspective-skill）。",
     "接入新哲人": "在philosophers中添加条目，source=remote，url指向任意GitHub账户的raw SKILL.md，enabled=true即可",
     "失败容错": "加载失败的哲人会在陈列卡片中标记为⚠️，不影响其他哲人"
   }
