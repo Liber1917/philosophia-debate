@@ -62,12 +62,57 @@
       "keywords": ["先锋队", "帝国主义", "国家机器", "具体真理", "民主集中制", "薄弱环节", "无产阶级专政"],
       "enabled": true,
       "emoji": "🔶"
+    },
+    "foucault": {
+      "source": "remote",
+      "url": "https://raw.githubusercontent.com/Liber1917/foucault-perspective-skill/main/SKILL.md",
+      "repo": "https://github.com/Liber1917/foucault-perspective-skill",
+      "description": "福柯权力分析/谱系学/生命政治视角",
+      "keywords": ["权力", "知识", "话语", "规训", "生命政治", "治理术", "主体化", "谱系学", "陈述"],
+      "enabled": true,
+      "emoji": "🟤"
+    },
+    "gramsci": {
+      "source": "remote",
+      "url": "https://raw.githubusercontent.com/Liber1917/gramsci-perspective-skill/main/SKILL.md",
+      "repo": "https://github.com/Liber1917/gramsci-perspective-skill",
+      "description": "葛兰西霸权理论/阵地战/有机知识分子视角",
+      "keywords": ["霸权", "市民社会", "阵地战", "有机知识分子", "消极革命", "从属者", "完整国家"],
+      "enabled": true,
+      "emoji": "⚪"
+    },
+    "deleuze-guattari": {
+      "source": "remote",
+      "url": "https://raw.githubusercontent.com/Liber1917/deleuze-guattari-perspective-skill/main/SKILL.md",
+      "repo": "https://github.com/Liber1917/deleuze-guattari-perspective-skill",
+      "description": "德勒兹&加塔利根茎/欲望机器/精神分裂分析视角",
+      "keywords": ["根茎", "欲望机器", "精神分裂分析", "逃逸线", "解域化", "少数文学", "无器官身体"],
+      "enabled": true,
+      "emoji": "🔷"
+    },
+    "scott": {
+      "source": "remote",
+      "url": "https://raw.githubusercontent.com/Liber1917/scott-perspective-skill/main/SKILL.md",
+      "repo": "https://github.com/Liber1917/scott-perspective-skill",
+      "description": "詹姆斯·C·斯科特日常抵抗/隐蔽文本/道德经济视角",
+      "keywords": ["日常抵抗", "隐蔽文本", "公开文本", "道德经济", "僭越型高现代主义", "米提斯", "非被统治的艺术"],
+      "enabled": true,
+      "emoji": "🌾"
+    },
+    "negri-hardt": {
+      "source": "remote",
+      "url": "https://raw.githubusercontent.com/Liber1917/negri-hardt-perspective-skill/main/SKILL.md",
+      "repo": "https://github.com/Liber1917/negri-hardt-perspective-skill",
+      "description": "奈格里&哈特帝国/诸众/共有/出走视角",
+      "keywords": ["帝国", "诸众", "共有", "制宪权", "生命政治生产", "出走", "非物质劳动", "单一性"],
+      "enabled": true,
+      "emoji": "🟠"
     }
   },
   "_meta": {
-    "version": "1.5",
-    "updated": "2026-04-29",
-    "note": "v1.5: 添加列宁lenin条目（remote源，Liber1917/lenin-perspective-skill）。",
+    "version": "2.0",
+    "updated": "2026-05-16",
+    "note": "v2.0: 添加5系谱学哲人入口(foucault/gramsci/deleuze-guattari/scott/negri-hardt)，均为local源。体系范式：'Immanent Critique Through Strategic Mediation'",
     "接入新哲人": "在philosophers中添加条目，source=remote，url指向任意GitHub账户的raw SKILL.md，enabled=true即可",
     "失败容错": "加载失败的哲人会在陈列卡片中标记为⚠️，不影响其他哲人"
   }
