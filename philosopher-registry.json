@@ -110,9 +110,9 @@
     }
   },
   "_meta": {
-    "version": "2.0",
+    "version": "2.1",
     "updated": "2026-05-16",
-    "note": "v2.0: 添加5系谱学哲人入口(foucault/gramsci/deleuze-guattari/scott/negri-hardt)，均为local源。体系范式：'Immanent Critique Through Strategic Mediation'",
+    "note": "v2.1: 5系谱学哲人从local→remote源，各自独立GitHub仓库。v2.0: 添加5系谱学哲人入口(foucault/gramsci/deleuze-guattari/scott/negri-hardt)，体系范式：'Immanent Critique Through Strategic Mediation'",
     "接入新哲人": "在philosophers中添加条目，source=remote，url指向任意GitHub账户的raw SKILL.md，enabled=true即可",
     "失败容错": "加载失败的哲人会在陈列卡片中标记为⚠️，不影响其他哲人"
   }
