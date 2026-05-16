@@ -47,5 +47,6 @@ yarn-error.log
 *.bak
 *.backup
 
-# 辩论记录（本地运行时生成）
-dialectike-records/local/
+# 辩论记录（私人哲学反思，不公开）
+dialectike-records/
+!dialectike-records/.gitkeep

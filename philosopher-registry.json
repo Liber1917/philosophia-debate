@@ -38,9 +38,9 @@
     },
     "plato": {
       "source": "remote",
-      "url": "https://raw.githubusercontent.com/USER/plato-perspective/main/SKILL.md",
-      "repo": "https://github.com/USER/plato-perspective",
-      "description": "柏拉图理念论视角",
+      "url": "TODO: 创建 Liber1917/plato-perspective-skill 后更新此 URL",
+      "repo": "TODO: https://github.com/Liber1917/plato-perspective-skill",
+      "description": "柏拉图理念论视角（待蒸馏）",
       "keywords": ["理念", "形式", "灵魂", "回忆", "洞穴"],
       "enabled": false,
       "emoji": "🔘"
@@ -110,10 +110,28 @@
     }
   },
   "_meta": {
-    "version": "2.1",
+    "version": "2.2",
     "updated": "2026-05-16",
-    "note": "v2.1: 5系谱学哲人从local→remote源，各自独立GitHub仓库。v2.0: 添加5系谱学哲人入口(foucault/gramsci/deleuze-guattari/scott/negri-hardt)，体系范式：'Immanent Critique Through Strategic Mediation'",
-    "接入新哲人": "在philosophers中添加条目，source=remote，url指向任意GitHub账户的raw SKILL.md，enabled=true即可",
+    "note": "v2.2: 补充autoDiscover默认加载逻辑，所有Liber1917名下perspective-skill仓库已完整注册。v2.1: 5系谱学哲人从local→remote源。体系范式：'Immanent Critique Through Strategic Mediation'",
+    "autoDiscover": {
+      "enabled": true,
+      "pattern": "*-perspective-skill",
+      "owner": "Liber1917",
+      "defaultPhilosophers": [
+        "hegel-perspective-skill",
+        "karl-marx-skill",
+        "lacan-perspective-skill",
+        "witgenstein-perspective-skill",
+        "zizek-perspective-skill",
+        "lenin-perspective-skill",
+        "foucault-perspective-skill",
+        "gramsci-perspective-skill",
+        "deleuze-guattari-perspective-skill",
+        "scott-perspective-skill",
+        "negri-hardt-perspective-skill"
+      ]
+    },
+    "接入新哲人": "在philosophers中添加条目 → 在autoDiscover.defaultPhilosophers中追加 → 创建GitHub仓库 Liber1917/<name>-perspective-skill",
     "失败容错": "加载失败的哲人会在陈列卡片中标记为⚠️，不影响其他哲人"
   }
 }
